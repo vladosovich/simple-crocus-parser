@@ -32,8 +32,8 @@ for val in all_divs:
         
         go = lambda a, b : True if (len(a) > 0 and len(b) > 0) else False
         answer = go(data1, data2)
+        
         if(answer):
-            mezh = []
             id = val.find('label', attrs={'class': 'bgs'}).get('for')
             name = data1[0].find('img', attrs={'class': 'leftimg'}).get('alt')
             category = data1[0].find('em').text
