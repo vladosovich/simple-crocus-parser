@@ -22,11 +22,14 @@ soup = BeautifulSoup(p.text, 'html.parser')
 
 all_blocks = soup.find(class_='ac-container')
 all_divs = all_blocks.find_all('div' )
+
+#Parse all events on page
 for val in all_divs: 
     try:
-        data1 = val.find_all('label', attrs={'class': 'bgs'})
-        
+        #Here we get name and option blocks
+        data1 = val.find_all('label', attrs={'class': 'bgs'}) 
         data2 = val.find_all('article', attrs={'class': 'ac-full'})
+        
         go = lambda a, b : True if (len(a) > 0 and len(b) > 0) else False
         answer = go(data1, data2)
         if(answer):
