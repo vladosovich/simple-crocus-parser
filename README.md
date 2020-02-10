@@ -1,3 +1,10 @@
+Go to console.cloud.google.com
+services -> enable google drive -> download json file
+services -> enable google sheets
+
+ 
+
+
 1)First install oauth2client
 
 pip install gspread oauth2client 
